@@ -1,0 +1,372 @@
+@font-face {
+    font-family: handwritten;
+    src: url('../fonts/handwritten/handwritten.woff');
+}
+@font-face {
+    font-family: justsignature;
+    src: url('../fonts/justsignature/JustSignature.woff');
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+p, h1, h2, h3, h4, ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: black;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 15px;
+}
+button {
+  color: white !important;
+  background: black !important;
+}
+.error {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background: #ad2424;
+  color: white;
+  width: 560px;
+  padding: 20px 10px 20px 10px;
+  z-index: 100;
+  top: 100px;
+  border-radius: 20px;
+}
+#criminal-record-wrapper {
+  display: none;
+  background: url("../images/background.png");
+  width: 640px;
+  height: 840px;
+  position: absolute;
+  left: 25%;
+  top: 50px;
+}
+#menu #header {
+  margin-bottom: 60px;
+}
+#menu #menu-content h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#menu #menu-content {
+  padding: 40px;
+}
+#menu button {
+  margin-bottom: 5px;
+}
+#search,
+#add,
+#search-result {
+  display: none;
+}
+#add textarea {
+  height: 200px !important;
+  max-height: 300px;
+}
+#search-result table tbody td,
+#search-result table thead th {
+  width: 187px;
+}
+#search-result table {
+  height: 600px !important;
+}
+#search-result p {
+  position: absolute;
+  top: 180px;
+}
+#welcome p {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+#welcome h1:nth-child(even) {
+  font-weight: bold;
+}
+#welcome table {
+  border-bottom: 4px solid black;
+  margin-bottom: 6px;
+  height: 345px !important;
+}
+.input-field input[type=text],
+.input-field textarea {
+ border-bottom: 1px solid #e0e0e0 !important;
+ box-shadow: 0 1px 0 0 #e0e0e0 !important;
+}
+.input-field input[type=text]:focus + label,
+.input-field textarea:focus + label {
+ color: black !important;
+}
+.input-field input[type=text]:focus,
+.input-field textarea:focus {
+ border-bottom: 1px solid black !important;
+ box-shadow: 0 1px 0 0 black !important;
+}
+#criminal-record {
+  display: none;
+}
+#header {
+  padding: 20px 40px 20px 40px;
+}
+#header ul {
+  border-top: 4px solid black;
+  padding-top: 6px;
+  width: 200px;
+  float: right;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+#header li {
+  display: list-item;
+}
+#header ul li p:nth-child(odd) {
+  float: left;
+  font-weight: bold;
+  width: 100px;
+}
+#header h1 {
+  float: left;
+  padding-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+#header p {
+  font-size: 10px;
+}
+#header img {
+  float: left;
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+#content {
+  margin-top: 80px;
+  padding: 20px 40px 20px 40px;
+}
+#basic-info p {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#content #basic-info ul {
+  margin-bottom: 40px;
+}
+#content #basic-info {
+  height: 253px;
+}
+#content #basic-info ul {
+  float: left;
+}
+#basic-info ul li:nth-child(1) {
+  border-top: 1px solid black;
+}
+#basic-info ul li {
+  border-bottom: 1px solid black;
+}
+#basic-info ul li {
+  width: 370px;
+  padding: 8px 20px 27px 20px;
+}
+#basic-info ul li p {
+  float: left;
+}
+#basic-info .square {
+  margin-top: -8px;
+  position: relative;
+  width: 28px !important;
+  padding: 10px;
+  border-right: 1px solid black;
+  font-weight: bold;
+}
+#basic-info .square:nth-child(2) {
+  border-left: 1px solid black !important;
+}
+#basic-info .square:nth-last-child(1) {
+  border-right: none !important;
+}
+#basic-info .square i {
+  position: absolute;
+  font-size: 8px;
+  top: 1px;
+  left: 3px;
+}
+#basic-info .divided .left:nth-child(odd) {
+  width: 170px;
+}
+#basic-info ul li p:nth-child(odd) {
+  font-weight: bold;
+  width: 100px;
+}
+#content #basic-info img {
+  border: 1px solid black;
+  float: right;
+  height: 253px;
+  width: 170px;
+}
+#content #records {
+  margin-top: 40px;
+}
+#content #records h1 {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+table {
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  height: 195px !important;
+  overflow-y: scroll;
+}
+table tbody td,
+table thead th {
+  width: 112px;
+}
+table thead tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+table thead th {
+  padding: 5px !important;
+}
+table tbody tr {
+  border-bottom: 1px solid black;
+  transition: all .1s ease-in;
+}
+table tbody tr:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+table tbody tr:active {
+  background: grey;
+}
+.markup {
+  background: url("../images/markup.png");
+  color: #22272a;
+}
+.markup:hover {
+  background: url("../images/markup.png");
+  color: #22272a;
+}
+.markup:active {
+  background: url("../images/markup.png");
+}
+#content #footer {
+  margin-top: 15px;
+}
+#content #footer h1 {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+#content #footer ul {
+  height: 130px;
+  width: 235px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#content #footer ul li {
+  font-size: 12px;
+  line-height: 25px;
+  height: 150px;
+  overflow: scroll;
+}
+#content #footer img {
+  height: 130px;
+}
+#record-info {
+  display: none;
+}
+#record-info .info {
+  height: 144px;
+  overflow: scroll;
+}
+#record-info #basic-info {
+  margin-bottom: 40px;
+}
+.signature-part {
+  display: inline-block;
+  /* margin-right: 20px; */
+}
+.signature-part p {
+  width: 183px;
+}
+.signature-part p:nth-child(odd) {
+  transform: skewY(-4deg);
+  letter-spacing: 4px;
+  padding-left: 20px;
+  font-weight: bold;
+  color: #295670;
+  font-size: 25px;
+  font-family: handwritten;
+}
+.signature-part p:nth-child(even) {
+  border-top: 1px solid black;
+  font-size: 10px;
+  font-weight: bold;
+}
+#the-signature {
+  letter-spacing: 0px;
+  transform: none;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: justsignature;
+}
+#record-info button {
+  margin-top: 50px;
+  width: 49%;
+}
+#record-info .large {
+  margin-top: 10px;
+  width: 100% !important;
+}
+#record-info button:nth-child(even) {
+  float: right;
+}
+#record-info textarea {
+  resize: none;
+  height: 220px;
+  border: none;
+}
+#record-info textarea:focus {
+  outline: none;
+}
+input,
+input:focus,
+input:active {
+  border-bottom: none !important;
+}
+.small-txt {
+  font-size: 8px !important;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+/* @media only screen and (max-width: 1300px) {
+  #wrapper {
+    left: 5%;
+  }
+} */
