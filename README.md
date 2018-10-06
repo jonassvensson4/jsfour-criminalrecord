@@ -1,4 +1,6 @@
 # jsfour-criminalrecord
+A new version of jsfour-brottsregister with more features
+
 CURRENTLY TESTING THIS
 
 ### LICENSE
