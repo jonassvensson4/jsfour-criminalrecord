@@ -28,12 +28,15 @@ You'll find the marker inside the police station behind the desk at the archives
 * The criminal record/user-info (picture 2)
   * This pages only displays some basic information about the player, you can also access all the players criminal records
   * Yes the weight is random. It's based on gender and height #metoo
+  * You can press the LSPD logo if you want to go back to the starting page
 
 * The crime info (picture 3)
+  * You can press the DOB in the top right corner to view the criminal record/user-info page
   * You can change the description on a record, it may not look like a input field but it is and it can be changed
   * If you press the classified button it will make the record classified. You can only access it via the offense id
   * If you want to change anything else you have to delete it and reupload it
   * Delete button deletes the record. If that's the only record the player has it will also remove the player from the criminal record
+  * You can press the LSPD logo if you want to go back to the starting page
  
 ### SCREENSHOTS
 ![screenshot](https://i.gyazo.com/648f7a09a8f75884ade9898931d4b927.png)
