@@ -1,5 +1,5 @@
 # jsfour-criminalrecord
-A new version of jsfour-brottsregister with more features
+A new version of jsfour-brottsregister with more features and it's in english!
 
 CURRENTLY TESTING THIS
 
