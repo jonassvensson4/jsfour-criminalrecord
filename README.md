@@ -1,8 +1,6 @@
 # jsfour-criminalrecord
 A new version of jsfour-brottsregister with more features and it's in english!
 
-CURRENTLY TESTING THIS
-
 ### LICENSE
 Please don't sell or reupload this resource
 
