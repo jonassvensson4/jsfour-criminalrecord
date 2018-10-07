@@ -1,7 +1,7 @@
 USE `essentialmode`;
 
 CREATE TABLE `jsfour_criminalrecord` (
-  `offense` varchar(255) NOT NULL,
+  `offense` varchar(160) NOT NULL,
   `date` varchar(255) DEFAULT NULL,
   `institution` varchar(255) DEFAULT NULL,
   `charge` varchar(255) DEFAULT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `jsfour_criminalrecord` (
 );
 
 CREATE TABLE `jsfour_criminaluserinfo` (
-  `identifier` varchar(255) NOT NULL,
+  `identifier` varchar(160) NOT NULL,
   `aliases` varchar(255) DEFAULT NULL,
   `recordid` varchar(255) DEFAULT NULL,
   `weight` varchar(255) DEFAULT NULL,
@@ -25,6 +25,6 @@ CREATE TABLE `jsfour_criminaluserinfo` (
   `lastname` varchar(255) DEFAULT NULL,
   `dob` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
-  `height` varchar(25) DEFAULT NULL,
+  `height` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`identifier`)
 );
