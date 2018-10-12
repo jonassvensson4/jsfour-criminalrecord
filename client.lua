@@ -1,6 +1,7 @@
 local ESX      = nil
 local open 		 = false
 local inMarker = false
+local PlayerData = {}
 
 -- ESX
 Citizen.CreateThread(function()
