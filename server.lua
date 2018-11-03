@@ -154,7 +154,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
     warden = result[1].firstname
   end)
 
-  MySQL.Async.fetchAll('SELECT identifier, skin, sex, height FROM users WHERE firstname = @firstname AND lastname = @lastname AND dateofbirth = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
+  MySQL.Async.fetchAll('SELECT identifier, skin, sex, height FROM users WHERE UPPER(firstname) = @firstname AND UPPER(lastname) = @lastname AND dateofbirth = @dob', {['@firstname'] = string.upper(data.firstname), ['@lastname'] = string.upper(data.lastname), ['@dob'] = data.dob},
   function (result)
     if result[1] ~= nil then
       local identifier = result[1].identifier
