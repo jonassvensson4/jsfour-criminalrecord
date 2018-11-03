@@ -12,7 +12,7 @@ Please don't sell or reupload this resource
 ### GUIDE
 You'll find the marker inside the police station behind the desk at the archives
 * Add a player
-  * You need to fill in all the input fields if you want to add a player to the criminal record. The first name, last name and DOB needs to be spelled the exact same way they're spelt in the database
+  * You need to fill in all the input fields if you want to add a player to the criminal record.
   * Charge = The crime the player has committed (robbery, murder etc)
   * Term = The time the player has to spend in jail. It has to have this format: (0Y 0M 0D)
   * Date = The date, if you write Today it will pick the current day as day
