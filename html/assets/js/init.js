@@ -297,8 +297,8 @@ $(document).ready(function() {
 
     if ( firstname.length > 0 && lastname.length > 0 && dob.length > 0 && charge.length > 0 && description.length > 0 && term.length > 0 && date.length > 0 ) {
       $.post('http://jsfour-criminalrecord/add', JSON.stringify({
-        firstname: firstname,
-        lastname: lastname,
+        firstname: firstname.toUpperCase(),
+        lastname: lastname.toUpperCase(),
         dob: dob,
         charge: charge,
         description: description,
