@@ -262,8 +262,8 @@ $(document).ready(function() {
       });
     } else {
       $.post('http://jsfour-criminalrecord/search', JSON.stringify( {
-        firstname: $('#firstname-search').val(),
-        lastname: $('#lastname-search').val(),
+        firstname: $('#firstname-search').val().toUpperCase(),
+        lastname: $('#lastname-search').val().toUpperCase(),
         dob: $('#dob-search').val(),
         offense: offense
       }), function( cb ) {
