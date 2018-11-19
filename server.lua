@@ -154,7 +154,8 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
     warden = result[1].firstname
   end)
 
-  MySQL.Async.fetchAll('SELECT identifier, skin, sex, height FROM users WHERE UPPER(firstname) = @firstname AND UPPER(lastname) = @lastname AND dateofbirth = @dob', {['@firstname'] = string.upper(data.firstname), ['@lastname'] = string.upper(data.lastname), ['@dob'] = data.dob},
+
+  MySQL.Async.fetchAll('SELECT identifier, skin, sex, height FROM users WHERE UPPER(firstname) = @firstname AND UPPER(lastname) = @lastname AND dateofbirth = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
   function (result)
     if result[1] ~= nil then
       local identifier = result[1].identifier
@@ -208,7 +209,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
                 MySQL.Async.fetchAll('SELECT * FROM jsfour_criminalrecord WHERE offense = @offense', {['@offense'] = offense},
                  function (result)
                    if result[1] ~= nil then
-                     MySQL.Async.fetchAll('SELECT * FROM jsfour_criminaluserinfo WHERE firstname = @firstname AND lastname = @lastname AND dob = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
+                     MySQL.Async.fetchAll('SELECT * FROM jsfour_criminaluserinfo WHERE UPPER(firstname) = @firstname AND UPPER(lastname) = @lastname AND dob = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
                       function (uinfo)
                         if uinfo[1] ~= nil then
                           local array = {
@@ -241,14 +242,13 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
              MySQL.Async.fetchAll('SELECT * FROM jsfour_criminalrecord WHERE offense = @offense', {['@offense'] = offense},
               function (result)
                 if result[1] ~= nil then
-                  MySQL.Async.fetchAll('SELECT * FROM jsfour_criminaluserinfo WHERE firstname = @firstname AND lastname = @lastname AND dob = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
+                  MySQL.Async.fetchAll('SELECT * FROM jsfour_criminaluserinfo WHERE UPPER(firstname) = @firstname AND UPPER(lastname) = @lastname AND dob = @dob', {['@firstname'] = data.firstname, ['@lastname'] = data.lastname, ['@dob'] = data.dob},
                    function (uinfo)
                      if uinfo[1] ~= nil then
                        local array = {
                          userinfo = uinfo,
                          records = result
                        }
-
                        cb(array)
                      end
                    end)
