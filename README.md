@@ -12,7 +12,6 @@ Please don't sell or reupload this resource
 ### GUIDE
 You'll find the marker inside the police station behind the desk at the archives
 * To go back to the start press the big circle at the top left
-* When you're inside a record you can press the DOB at the top right to go to the users profile
 
 * Add a player
   * You need to fill in all the input fields if you want to add a player to the criminal record.
