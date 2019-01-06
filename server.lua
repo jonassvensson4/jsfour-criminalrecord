@@ -64,7 +64,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:fetch', function( source, cb, 
   if type == 'start' then
     MySQL.Async.fetchAll('SELECT date, offense, institution, charge, term, classified FROM jsfour_criminalrecord', {},
     function (result)
-      cb(json.encode(result))
+      cb(result)
     end)
   elseif type == 'record' then
     MySQL.Async.fetchAll('SELECT * FROM jsfour_criminalrecord WHERE offense = @offense', {['@offense'] = data.offense},
@@ -76,7 +76,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:fetch', function( source, cb, 
 	          userinfo = resultUser,
 	          records = resultRecord
 	        }
-	        cb(json.encode(array))
+	        cb(array)
 	      end)
 			else
 				cb('error')
@@ -91,7 +91,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:fetch', function( source, cb, 
           userinfo = resultUser,
           records = resultRecord
         }
-        cb(json.encode(array))
+        cb(array)
       end)
     end)
   end
@@ -119,7 +119,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:search', function( source, cb,
     MySQL.Async.fetchAll(query, {},
      function (result)
        if result[1] ~= nil then
-         cb(json.encode(result))
+		cb(result)
        else
          cb('error')
        end
@@ -128,7 +128,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:search', function( source, cb,
      MySQL.Async.fetchAll(query, {['@x'] = queryVal},
       function (result)
         if result[1] ~= nil then
-          cb(json.encode(result))
+          cb(result)
         else
           cb('error')
         end
@@ -217,7 +217,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
                             records = result
                           }
 
-                          cb(json.encode(array))
+                          cb(array)
                         end
                       end)
                    end
@@ -249,7 +249,7 @@ ESX.RegisterServerCallback('jsfour-criminalrecord:add', function( source, cb, da
                          userinfo = uinfo,
                          records = result
                        }
-                       cb(json.encode(array))
+                       cb(array)
                      end
                    end)
                 end
