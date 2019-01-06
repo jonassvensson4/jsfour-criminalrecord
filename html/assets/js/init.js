@@ -9,7 +9,6 @@ $(document).ready(function() {
   window.addEventListener('message', function( event ) {
     if ( event.data.action == 'open' ) {
       var data = event.data.array;
-      data = JSON.parse(data);
       Object.keys( data ).forEach(function(key) {
         if (data[key].classified == 1) {
           $('#welcome tbody').append('<tr title="classified" class="markup" offense="'+data[key].offense+'">'+
@@ -60,7 +59,6 @@ $(document).ready(function() {
       $.post('http://jsfour-criminalrecord/fetch', JSON.stringify({
         type: 'start'
       }), function( cb ) {
-        cb = JSON.parse(cb);
         Object.keys( cb ).forEach(function(key) {
           if (cb[key].classified == 1) {
             $('#welcome tbody').append('<tr title="classified" class="markup" offense="'+cb[key].offense+'">'+
@@ -103,7 +101,6 @@ $(document).ready(function() {
       dob: dob,
     }), function( cb ) {
       if ( cb != 'error') {
-        cb = JSON.parse(cb);
         var recordid = cb['userinfo'][0].recordid;
         var dob = cb['userinfo'][0].dob;
         var sex = cb['userinfo'][0].sex;
@@ -172,7 +169,6 @@ $(document).ready(function() {
           offense: $(this).attr('offense'),
         }), function( cb ) {
           if ( cb != 'error' ) {
-            cb = JSON.parse(cb);
             var offense = cb['records'][0].offense;
             var term = cb['records'][0].term.split(" ");
 
@@ -231,7 +227,6 @@ $(document).ready(function() {
         offense: offense,
       }), function( cb ) {
         if ( cb != 'error' ) {
-          cb = JSON.parse(cb);
           var offense = cb['records'][0].offense;
           var term = cb['records'][0].term.split(" ");
 
@@ -310,7 +305,6 @@ $(document).ready(function() {
         date: date
       }), function( cb ) {
         if ( cb != 'error' ) {
-          cb = JSON.parse(cb);
           var offense = cb['records'][0].offense;
           var term = cb['records'][0].term.split(" ");
 
@@ -361,7 +355,6 @@ $(document).ready(function() {
       $.post('http://jsfour-criminalrecord/fetch', JSON.stringify({
         type: 'start'
       }), function( cb ) {
-        cb = JSON.parse(cb);
         Object.keys( cb ).forEach(function(key) {
           if (cb[key].classified == 1) {
             $('#welcome tbody').append('<tr title="classified" class="markup" offense="'+cb[key].offense+'">'+
@@ -401,7 +394,6 @@ $(document).ready(function() {
       $.post('http://jsfour-criminalrecord/fetch', JSON.stringify({
         type: 'start'
       }), function( cb ) {
-        cb = JSON.parse(cb);
         Object.keys( cb ).forEach(function(key) {
           if (cb[key].classified == 1) {
             $('#welcome tbody').append('<tr title="classified" class="markup" offense="'+cb[key].offense+'">'+
@@ -440,7 +432,6 @@ $(document).ready(function() {
       $.post('http://jsfour-criminalrecord/fetch', JSON.stringify({
         type: 'start'
       }), function( cb ) {
-        cb = JSON.parse(cb);
         Object.keys( cb ).forEach(function(key) {
           if (cb[key].classified = 1) {
             $('#welcome tbody').append('<tr title="classified" class="markup" offense="'+cb[key].offense+'">'+
